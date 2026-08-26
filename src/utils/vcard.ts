@@ -12,7 +12,7 @@ export function downloadVCard(): void {
     `TEL;TYPE=WHATSAPP,MSG:${PROFILE_DATA.whatsappNumber}`,
     `TEL;TYPE=WORK,AGENT:${PROFILE_DATA.contacts.find((c) => c.type === 'bkash-agent')?.number || ''}`,
     'ADR;TYPE=WORK,POSTAL:;;হলদিবাড়ি\\, কাউনিয়া;রংপুর;;;বাংলাদেশ',
-    `NOTE:Proprietor — Jihad Hardware & Electronics. WhatsApp: ${PROFILE_DATA.whatsappNumber}, Bkash: ${PROFILE_DATA.whatsappNumber}, Nagad: ${PROFILE_DATA.whatsappNumber}`,
+    `NOTE:Proprietor — Jihad Hardware & Electronics. Call/WhatsApp: ${PROFILE_DATA.callNumber}, Bkash/Nagad Personal: 01930313640, Bkash Agent: 01310499958`,
     `URL:${PROFILE_DATA.facebookUrl}`,
     'END:VCARD',
   ].join('\r\n');

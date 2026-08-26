@@ -2,5 +2,7 @@
   "name": "Md Rubel Mia - Personal Contact",
   "description": "Personal Contact & Identity Website for Md Rubel Mia, Proprietor — Jihad Hardware & Electronics, Haldibari, Kaunia, Rangpur.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

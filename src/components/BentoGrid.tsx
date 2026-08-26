@@ -24,12 +24,14 @@ export const BentoGrid: React.FC = () => {
   const [heroImgError, setHeroImgError] = useState(false);
   const [heroImgLoaded, setHeroImgLoaded] = useState(false);
 
-  // Auto-try .jpg and .png for Rubel Mia's image
+  // Auto-try rubel-mia1 (.jpg, .png, .jpeg, .webp) for Rubel Mia's image
   const heroImageCandidates = [
+    '/images/rubel-mia1.jpg',
+    '/images/rubel-mia1.png',
+    '/images/rubel-mia1.jpeg',
+    '/images/rubel-mia1.webp',
     '/images/rubel-mia.jpg',
     '/images/rubel-mia.png',
-    '/images/rubel-mia.jpeg',
-    '/images/rubel-mia.webp',
   ];
   const [heroCandidateIdx, setHeroCandidateIdx] = useState(0);
 
@@ -191,30 +193,32 @@ export const BentoGrid: React.FC = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, delay: 0.1 }}
-              className="bg-white/90 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800 hover:border-blue-500/40 rounded-3xl p-4.5 sm:p-5 flex flex-col justify-between shadow-sm dark:shadow-xl group transition-all"
+              className="bg-white/95 dark:bg-slate-900/70 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800 hover:border-blue-500/40 rounded-3xl p-5 sm:p-5.5 flex flex-col justify-between shadow-sm dark:shadow-xl group transition-all"
             >
               <div className="flex justify-between items-center mb-3">
-                <div className="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center group-hover:scale-105 transition-transform">
-                  <Phone className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                <div className="w-10 h-10 rounded-2xl bg-blue-500/10 dark:bg-blue-500/20 border border-blue-500/20 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <Phone className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-blue-600 dark:text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded-full border border-blue-500/20">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/60 px-2.5 py-1 rounded-full border border-blue-200 dark:border-blue-800/80">
                   Voice Call
                 </span>
               </div>
 
               <div>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400">Direct Phone</div>
-                <div className="text-lg font-mono font-bold text-blue-600 dark:text-blue-400 my-1 select-all">
+                <div className="text-[11px] font-medium text-slate-500 dark:text-slate-400 font-bengali">
+                  সরাসরি ফোন কল • Phone Call
+                </div>
+                <div className="text-xl sm:text-2xl font-mono font-extrabold text-slate-900 dark:text-white my-1.5 select-all tracking-tight">
                   {PROFILE_DATA.callNumber}
                 </div>
                 <a
                   id="bento-btn-call"
                   href={`tel:${PROFILE_DATA.callNumberRaw}`}
-                  className="flex items-center justify-center gap-2 w-full py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold text-xs sm:text-sm transition-all shadow-md shadow-blue-600/20 active:scale-95 cursor-pointer mt-2"
+                  className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-2xl font-bold text-sm shadow-md shadow-blue-600/25 hover:shadow-lg hover:shadow-blue-600/40 active:scale-[0.98] transition-all cursor-pointer mt-3"
                 >
-                  <Phone className="w-3.5 h-3.5 fill-white" />
-                  <span>Call Now</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 ml-auto opacity-80" />
+                  <Phone className="w-4 h-4 fill-white shrink-0" />
+                  <span className="whitespace-nowrap font-bold">Call Now</span>
+                  <ArrowUpRight className="w-4 h-4 shrink-0 opacity-80" />
                 </a>
               </div>
             </motion.div>
@@ -224,20 +228,22 @@ export const BentoGrid: React.FC = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, delay: 0.15 }}
-              className="bg-white/90 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800 hover:border-green-500/40 rounded-3xl p-4.5 sm:p-5 flex flex-col justify-between shadow-sm dark:shadow-xl group transition-all"
+              className="bg-white/95 dark:bg-slate-900/70 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800 hover:border-emerald-500/40 rounded-3xl p-5 sm:p-5.5 flex flex-col justify-between shadow-sm dark:shadow-xl group transition-all"
             >
               <div className="flex justify-between items-center mb-3">
-                <div className="w-9 h-9 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center group-hover:scale-105 transition-transform">
-                  <MessageCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
+                <div className="w-10 h-10 rounded-2xl bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/20 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <MessageCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                 </div>
-                <span className="text-[10px] font-extrabold uppercase tracking-widest text-green-600 dark:text-green-400 bg-green-500/10 px-2 py-0.5 rounded-full border border-green-500/20">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800/80">
                   WhatsApp
                 </span>
               </div>
 
               <div>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400">WhatsApp Chat</div>
-                <div className="text-lg font-mono font-bold text-green-600 dark:text-green-400 my-1 select-all">
+                <div className="text-[11px] font-medium text-slate-500 dark:text-slate-400 font-bengali">
+                  সরাসরি চ্যাট • WhatsApp Chat
+                </div>
+                <div className="text-xl sm:text-2xl font-mono font-extrabold text-slate-900 dark:text-white my-1.5 select-all tracking-tight">
                   {PROFILE_DATA.whatsappNumber}
                 </div>
                 <a
@@ -245,11 +251,11 @@ export const BentoGrid: React.FC = () => {
                   href={PROFILE_DATA.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-2 bg-green-600 hover:bg-green-500 text-white rounded-xl font-bold text-xs sm:text-sm transition-all shadow-md shadow-green-600/20 active:scale-95 cursor-pointer mt-2"
+                  className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white rounded-2xl font-bold text-sm shadow-md shadow-emerald-600/25 hover:shadow-lg hover:shadow-emerald-600/40 active:scale-[0.98] transition-all cursor-pointer mt-3"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 fill-white" />
-                  <span>WhatsApp Chat</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 ml-auto opacity-80" />
+                  <MessageCircle className="w-4 h-4 fill-white shrink-0" />
+                  <span className="whitespace-nowrap font-bold">WhatsApp Chat</span>
+                  <ArrowUpRight className="w-4 h-4 shrink-0 opacity-80" />
                 </a>
               </div>
             </motion.div>
@@ -438,11 +444,11 @@ export const BentoGrid: React.FC = () => {
               href={PROFILE_DATA.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 border border-slate-300 dark:border-slate-700 font-bold text-xs sm:text-sm transition-all active:scale-95 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 border border-slate-300 dark:border-slate-700 font-bold text-xs sm:text-sm transition-all active:scale-[0.98] cursor-pointer shadow-xs"
             >
-              <Navigation className="w-3.5 h-3.5 text-rose-500" />
-              <span>Google Maps-এ অবস্থান দেখুন</span>
-              <ArrowUpRight className="w-3.5 h-3.5 ml-auto text-slate-400" />
+              <Navigation className="w-4 h-4 text-rose-500 shrink-0" />
+              <span className="whitespace-nowrap">Google Maps-এ অবস্থান দেখুন</span>
+              <ArrowUpRight className="w-4 h-4 text-slate-400 shrink-0" />
             </a>
           </div>
         </motion.div>

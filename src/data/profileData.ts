@@ -11,7 +11,7 @@ export const PROFILE_DATA: ProfileData = {
   callNumber: '01744386018',
   callNumberRaw: '+8801744386018',
   whatsappNumber: '01930313640',
-  whatsappUrl: 'https://wa.me/88019303613640',
+  whatsappUrl: 'https://wa.me/8801930313640',
   facebookUrl: 'https://www.facebook.com/profile.php?id=100013636960182',
   contacts: [
     {
@@ -89,7 +89,7 @@ export const PROFILE_DATA: ProfileData = {
     {
       id: 'social-whatsapp',
       name: 'WhatsApp',
-      url: 'https://wa.me/88019303613640',
+      url: 'https://wa.me/8801930313640',
       username: '01930313640',
       iconType: 'whatsapp',
       color: 'emerald',
@@ -100,7 +100,7 @@ export const PROFILE_DATA: ProfileData = {
     title: 'Web & App Developer',
     phone: '01797910534',
     phoneRaw: '+8801797910534',
-    image: '/images/hm-jihad.jpg',
+    image: '/images/hm-jihad.png',
     text: 'যেকোনো ধরনের আধুনিক Website অথবা App তৈরি করতে যোগাযোগ করুন।',
   },
 };
